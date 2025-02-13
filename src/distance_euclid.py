@@ -30,8 +30,8 @@ def euclidean_distance(user_word, words):
         # calculando a distância
         distance = math.sqrt(sum((v1 - v2) ** 2 for v1, v2 in zip(user_vec, word_vec)))
 
-        if (distance == 0):
-            continue
+        #if (distance == 0):
+        #    continue
 
         # adicionando o resultado a lista
         corrections.append({'word': word, 'distance': distance})

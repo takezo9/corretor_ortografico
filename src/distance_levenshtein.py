@@ -27,7 +27,7 @@ def levenshtein_distance(user_word, words):
     for dict_word in words:
         
         distance = distance_levenshtein(user_word, dict_word)
-        if distance == 0: continue
+        #if distance == 0: continue
         
         suggestions.append({'word': dict_word, 'distance': distance})
 

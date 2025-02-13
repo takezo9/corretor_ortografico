@@ -13,7 +13,7 @@ import math
 
 from distance_euclid import word_to_ascii
 
-def angular_distance(user_word, words):
+def cosine_distance(user_word, words):
 
     # armazenando os resultados
     suggestions = []
@@ -43,11 +43,11 @@ def angular_distance(user_word, words):
             cos_similarity = 0
         
         # distancia em graus
-        angle = math.degrees(math.acos(cos_similarity))
-        # distance = 1 - cos_similarity
+        # angle = math.degrees(math.acos(cos_similarity))
+        distance = 1 - cos_similarity
 
         # armazenando resultado
-        suggestions.append({'word': dict_word, 'distance': angle})
+        suggestions.append({'word': dict_word, 'distance': distance})
     
     suggestions = sorted(suggestions, key=lambda word:word['distance'])
 
